@@ -6,12 +6,51 @@ readme = "README.md"
 authors = [
     { name = "wangmu", email = "wangmu8889@gmail.com" }
 ]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["pandas", "pydantic", "dataframe"]
 requires-python = ">=3.12"
 dependencies = [
     "pandas>=3.1.1",
     "pydantic>=2.14.3",
 ]
 
+[project.urls]
+Repository = "https://github.com/wangmu0115/Kitora"
+Issues = "https://github.com/wangmu0115/Kitora/issues"
+
 [build-system]
 requires = ["uv_build>=0.12.15,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "jsonschema>=4.23",
+    "pytest>=8.3",
+    "ruff>=0.17.5",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = [
+    "src",
+]
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "I", "UP", "B", "SIM",
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+docstring-code-format = true
+preview = true
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "kitora",
+]

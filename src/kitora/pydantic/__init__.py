@@ -3,12 +3,12 @@ from typing import TYPE_CHECKING
 from kitora.import_utils import import_attr
 
 if TYPE_CHECKING:
-    from kitora.pydantic.extra_fields import SourceField
+    from kitora.pydantic.augmented_fields import SourceField
 
 __all__ = ("SourceField",)
 
 _dynamic_imports = {
-    "SourceField": "extra_fields",
+    "SourceField": "augmented_fields",
 }
 
 
