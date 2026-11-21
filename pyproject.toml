@@ -1,6 +1,6 @@
 [project]
 name = "kitora"
-version = "1.0.0"
+version = "1.0.1"
 description = "A personal toolkit for everyday Python"
 readme = "README.md"
 authors = [

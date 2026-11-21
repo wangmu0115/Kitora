@@ -1,7 +1,6 @@
 from typing import Any
 
 import pandas as pd
-from pandas.api.types import is_scalar
 from pydantic import BaseModel
 from pydantic.fields import FieldInfo
 
@@ -119,7 +118,7 @@ def _normalize_pandas_value(value: Any) -> Any:
     if value is None:
         return None
 
-    if not is_scalar(value):
+    if not pd.api.types.is_scalar(value):
         # 只对标量检查是否为 pandas None 值
         return value
 
